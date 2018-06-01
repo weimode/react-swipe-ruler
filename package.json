@@ -1,0 +1,19 @@
+{
+  "name": "react-swipe-ruler",
+  "version": "1.0.0",
+  "description": "react-swipe-ruler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weimode/react-swipe-ruler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weimode/react-swipe-ruler/issues"
+  },
+  "homepage": "https://github.com/weimode/react-swipe-ruler#readme"
+}
