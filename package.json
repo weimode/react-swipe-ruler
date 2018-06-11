@@ -4,6 +4,7 @@
   "description": "react-swipe-ruler",
   "main": "index.js",
   "scripts": {
+    "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/weimode/react-swipe-ruler/issues"
   },
-  "homepage": "https://github.com/weimode/react-swipe-ruler#readme"
+  "homepage": "https://github.com/weimode/react-swipe-ruler#readme",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^1.1.4"
+  }
 }
