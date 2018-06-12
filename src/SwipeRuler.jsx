@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
+import 'react-swipe-ruler/assets/index.less';
 
 const space = 13;
 
@@ -55,7 +55,7 @@ export default class SwipeRuler extends Component {
     if (total <= 0) return;
     const sticks = new Array(total).fill('');
     return (
-      <div className={classNames(prefixCls, "swiperuler")}>
+      <div className={`${prefixCls}-swiperuler`}>
         <div className={`${prefixCls}-sticksWrap`}>
           <div className={`${prefixCls}-sticks`} style={{ left: `${moveLeft}px` }} onTouchStart={this.onTouchStart.bind(this)} onTouchMove={this.onTouchMove.bind(this)} onTouchEnd={this.onTouchEnd.bind(this)}>
             {
