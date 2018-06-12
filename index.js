@@ -1,2 +1,2 @@
-import Rate from './src/';
+import SwipeRuler from './src/';
 export default SwipeRuler;

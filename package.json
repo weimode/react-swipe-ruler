@@ -1,7 +1,7 @@
 {
   "name": "react-swipe-ruler",
   "author": "weimode",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "react swipe ruler component",
   "keywords": [
     "react",
@@ -32,10 +32,11 @@
     "compile": "rc-tools run compile --babel-runtime",
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
-    "pub": "rc-tools run pub"
+    "pub": "rc-tools run pub --babel-runtime"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.5"
   },
   "devDependencies": {
     "rc-tools": "^7.0.2",
