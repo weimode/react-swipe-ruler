@@ -1,0 +1,46 @@
+@swipe-ruler-prefix-cls: react-swipe-ruler;
+
+.@{swipe-ruler-prefix-cls} {
+  &-swiperuler {
+    position: relative;
+  }
+  &-sticksWrap {
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+  &-sticks {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    border-bottom: 1px solid #c2c2c2;
+    margin-left: 50%;
+    margin-right: 49.5%;
+  }
+  &-singleStick {
+    position: relative;
+    display: inline-block;
+    width: 1px;
+    height: 28px;
+    background-color: #c2c2c2;
+    margin-left: 12px;
+    vertical-align: bottom;
+    color: #666666;
+  }
+  &-singleStick i {
+    position: absolute;
+    font-style: normal;
+    top: 45px;
+    left: -7px;
+    font-size: 12px;
+  }
+  &-standardLine {
+    position: absolute;
+    width: 1px;
+    height: 44px;
+    background: #5199f7;
+    top: 0;
+    left: 50%;
+  }
+}

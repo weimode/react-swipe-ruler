@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import './SwipeRuler.css';
+import 'react-swipe-ruler/assets/index.less';
 
 const space = 13;
-const DEFAULT_RANGE = [0, 10];
 
 export default class SwipeRuler extends Component {
+  static defaultProps = {
+    prefixCls: 'react-swipe-ruler',
+    range: [0, 10],
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -26,12 +30,10 @@ export default class SwipeRuler extends Component {
     this.setState({ currentX: x, moveLeft: left });
   }
   onTouchEnd = () => {
-    const { range = DEFAULT_RANGE } = this.props;
+    const { range } = this.props;
     const { moveLeft } = this.state;
     const remainder = moveLeft % space;
     const r = parseInt(moveLeft / space, 10);
-    // console.log(e.changedTouches[0]);
-    // console.log('onTouchEnd', moveLeft, remainder, r);
     let ultiVal;
     if (remainder < space / 2) {
       ultiVal = r;
@@ -48,21 +50,21 @@ export default class SwipeRuler extends Component {
   }
   render() {
     const { moveLeft, value } = this.state;
-    const { range = DEFAULT_RANGE } = this.props;
+    const { range, prefixCls } = this.props;
     const total = (range[1] - range[0]) * 10 + 1;
     if (total <= 0) return;
     const sticks = new Array(total).fill('');
     return (
-      <div className="swiperuler">
-        <div className="sticksWrap">
-          <div className='sticks' style={{ left: `${moveLeft}px` }} onTouchStart={this.onTouchStart.bind(this)} onTouchMove={this.onTouchMove.bind(this)} onTouchEnd={this.onTouchEnd.bind(this)}>
+      <div className={`${prefixCls}-swiperuler`}>
+        <div className={`${prefixCls}-sticksWrap`}>
+          <div className={`${prefixCls}-sticks`} style={{ left: `${moveLeft}px` }} onTouchStart={this.onTouchStart.bind(this)} onTouchMove={this.onTouchMove.bind(this)} onTouchEnd={this.onTouchEnd.bind(this)}>
             {
               sticks.map((item, i) => {
                 const halfPoint = (i + 10) % 5 === 0;
                 const intPoint = (i + 10) % 10 === 0;
                 const color = intPoint && value === i / 10 ? '#5199f7' : '';
                 return (
-                  <span className="singleStick" key={i} style={{ marginLeft: i === 0 ? '0' : '', height: halfPoint ? '44px' : '' }}>
+                  <span className={`${prefixCls}-singleStick`} key={i} style={{ marginLeft: i === 0 ? '0' : '', height: halfPoint ? '44px' : '' }}>
                     <i style={{ display: intPoint ? '' : 'none', color }}>{`${i * 0.1}.0`}</i>
                   </span>
                 );
@@ -70,7 +72,7 @@ export default class SwipeRuler extends Component {
             }
           </div>
         </div>
-        <span className="standardLine" />
+        <span className={`${prefixCls}-standardLine`} />
       </div>
     );
   }

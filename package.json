@@ -1,27 +1,45 @@
 {
   "name": "react-swipe-ruler",
-  "version": "0.2.0",
-  "description": "react-swipe-ruler",
-  "main": "index.js",
-  "scripts": {
-    "start": "react-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "weimode",
+  "version": "0.3.5",
+  "description": "react swipe ruler component",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-swipe-ruler"
+  ],
+  "homepage": "https://github.com/weimode/react-swipe-ruler#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/weimode/react-swipe-ruler.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/weimode/react-swipe-ruler/issues"
   },
-  "homepage": "https://github.com/weimode/react-swipe-ruler#readme",
+  "files": [
+    "lib",
+    "es",
+    "assets/*.css"
+  ],
+  "license": "ISC",
+  "main": "./lib/index",
+  "module": "./es/index",
+  "config": {
+    "port": 8000
+  },
+  "scripts": {
+    "build": "rc-tools run build",
+    "compile": "rc-tools run compile --babel-runtime",
+    "gh-pages": "rc-tools run gh-pages",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run pub --babel-runtime"
+  },
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "babel-runtime": "^6.26.0"
   },
   "devDependencies": {
-    "react-scripts": "^1.1.4"
+    "rc-tools": "^7.0.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   }
 }
