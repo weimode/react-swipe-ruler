@@ -4,6 +4,9 @@ node_modules
 
 # build
 build/*
+lib/*
+es/*
+assets/*.css
 
 # package-lock
 package-lock.json

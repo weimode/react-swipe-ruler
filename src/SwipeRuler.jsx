@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './SwipeRuler.css';
 
 const space = 13;
 const DEFAULT_RANGE = [0, 10];
